@@ -17,3 +17,24 @@ export GITHUB_TOKEN=<your-github-token>
 # Optional: export GITHUB_ORG=<github-org-for-pipeline-repo>
 python3 sifter.py <pipeline-repo-name> <pipeline-branch-name> <expected-component-repo-branch>
 ```
+
+## Interpret Results
+
+Snapshot Sifter will log when it detects issues with components in a manifest.  For example:
+```
+[cert-policy-controller] isn't up to date. # Repo and branch found, but commit out of date
+[cluster-proxy] has no branch release-2.8 # Repo found, but no expected-component-repo-branch
+[postgresql-12] git-repository invalid # Repo not found / invalid
+```
+
+Snapshot Sifter will also create a file, named after the latest snapshot manifest, which includes the following data in JSON format:
+```
+    "COMPONENT_NAME": {
+        "branch": "LINK_TO_BRANCH_IF_FOUND",
+        "commit": "LINK_TO_COMMIT_IF_FOUND",
+        "found_branch": true,
+        "found_repo": true,
+        "repo": "LINK_TO_REPO_IF_FOUND",
+        "up_to_date": true
+    },
+```
