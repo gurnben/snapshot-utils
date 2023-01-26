@@ -22,9 +22,9 @@ python3 sifter.py <pipeline-repo-name> <pipeline-branch-name> <expected-componen
 
 Snapshot Sifter will log when it detects issues with components in a manifest.  For example:
 ```
-[cert-policy-controller] isn't up to date. # Repo and branch found, but commit out of date
-[cluster-proxy] has no branch release-2.8 # Repo found, but no expected-component-repo-branch
-[postgresql-12] git-repository invalid # Repo not found / invalid
+[COMPONENT_NAME] isn't up to date. # Repo and branch found, but commit out of date
+[COMPONENT_NAME] has no branch release-2.8 # Repo found, but no expected-component-repo-branch
+[COMPONENT_NAME] git-repository invalid # Repo not found / invalid
 ```
 
 Snapshot Sifter will also create a file, named after the latest snapshot manifest, which includes the following data in JSON format:
