@@ -4,7 +4,7 @@ Separating the wheat from the chaff in MCE/ACM snapshots - determining which com
 
 ## Install
 
-Developed with Python 3.11!
+Should support Python 3.6.4 and up, tested with Python 3.9 and 3.11
 
 ```
 pip3 install -r requirements.txt
