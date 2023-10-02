@@ -58,7 +58,7 @@ pip3 install -r requirements.txt
 ```
 export GITHUB_TOKEN=<your-github-token>
 # Optional: export GITHUB_ORG=<github-org-for-pipeline-repo>
-python3 python sleuth.py <pipeline-repo-name> <pipeline-repo-branch> <component-git-repo-shortname> <component-git-sha>
+python3 sleuth.py <pipeline-repo-name> <pipeline-repo-branch> <component-git-repo-shortname> <component-git-sha>
 ```
 
 ### Interpreting Results
